@@ -6,7 +6,7 @@ class TerrainDataset(Dataset):
     def __init__(self, root_dir, transform=None, mode='train'):
         self.root_dir = os.path.join(root_dir, mode)
         self.transform = transform
-        self.terrain_classes = {'Desserts': 0, 'Mountain': 1, 'Forest Cover': 2}
+        self.terrain_classes = {'Deserts': 0, 'Mountains': 1, 'Forest Cover': 2}
         self.samples = []
         for terrain, label in self.terrain_classes.items():
             folder_path = os.path.join(self.root_dir, terrain)
