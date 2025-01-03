@@ -55,7 +55,7 @@ scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
 # Training loop inside the if __name__ == '__main__' block
 if __name__ == '__main__':
     # Training loop
-    num_epochs = 5  # Reduce epochs for faster testing
+    num_epochs = 10  # Reduce epochs for faster testing
     for epoch in range(num_epochs):
         model.train()  # Set model to training mode
         running_loss = 0.0
