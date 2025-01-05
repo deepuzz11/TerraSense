@@ -54,6 +54,10 @@ The goal of this project is to develop a model that can classify terrain types b
       │ ├── Deserts/
       │ ├── Forest Cover/
       │ └── Mountains/
+      ├── train/
+      │ ├── Deserts/
+      │ ├── Forest Cover/
+      │ └── Mountains/
       └── validation/
       ├── Deserts/
       ├── Forest Cover/
