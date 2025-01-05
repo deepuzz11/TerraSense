@@ -9,7 +9,7 @@
 - [Usage](#usage)
 - [Training Details](#training-details)
 - [Results](#results)
-- [Training Graphs](#graphs)
+- [Training Graphs](#training-graphs)
 - [Model](#model)
 - [License](#license)
 
