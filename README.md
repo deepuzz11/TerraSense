@@ -2,17 +2,15 @@
 
 **TerraSense** uses deep learning to classify terrain types and estimate surface properties like roughness and slipperiness, enabling smarter navigation for autonomous systems.
 
-**TerraSense** is a machine learning project designed for terrain classification using deep learning techniques. The model leverages a pre-trained MobileNetV2 architecture to classify images into three terrain categories : **Deserts**, **Forest Cover**, and **Mountains**. The project includes data preprocessing, model training, and evaluation workflows, all implemented in Python using the PyTorch framework.
-
 ## Table of Contents
 
-- Project Description
-- Installation
-- Usage
-- Training Details
-- Results
-- Model
-- License
+- [Project Description](#project-description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Training Details](#training-details)
+- [Results](#results)
+- [Model](#model)
+- [License](#license)
 
 ## Project Description
 
@@ -36,14 +34,35 @@ The goal of this project is to develop a model that can classify terrain types b
 
 ### Setup
 
-1.  git clone https://github.com/yourusername/TerraSense.gitcd TerraSense
-2.  pip install -r requirements.txtThe requirements.txt file should include:torch==1.12.0torchvision==0.13.0matplotlib==3.4.3pillow==8.2.0
+1. Clone the repository :
+
+```git clone https://github.com/yourusername/TerraSense.git
+ cd TerraSense
+```
+
+2. Instal the necessary dependencies :
+
+```bash pip install -r requirements.txt
+
+```
 
 ## Usage
 
-1.  TerraSense/├── data/ ├── train/ │ ├── Deserts/ │ ├── Forest Cover/ │ └── Mountains/ └── validation/ ├── Deserts/ ├── Forest Cover/ └── Mountains/
-2.  python main.pyThis will begin the training process on your local machine (CPU), print training and validation loss/accuracy per epoch, and save the final trained model as terrain_model.pth.
-3.  **Testing**: After training, you can use the trained model to make predictions on new images (not provided in the project but can be added to the script).
+1. Prepare your data :
+   TerraSense/
+   ├── data/
+   ├── train/
+   │ ├── Deserts/
+   │ ├── Forest Cover/
+   │ └── Mountains/
+   └── validation/
+   ├── Deserts/
+   ├── Forest Cover/
+   └── Mountains/
+
+2. Training: To start training the model, run: ` python main.py`
+   This will begin the training process on your local machine (CPU), print training and validation loss/accuracy per epoch, and save the final trained model as terrain_model.pth.
+3. **Testing**: After training, you can use the trained model to make predictions on new images (not provided in the project but can be added to the script).
 
 ## Training Details
 
@@ -55,7 +74,7 @@ The goal of this project is to develop a model that can classify terrain types b
 
 ### Example Training Output:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`  Epoch 1/10, Loss: 0.1975638451139358  Validation Accuracy: 92.13%  Epoch 2/10, Loss: 0.10591830498411912  Validation Accuracy: 83.76%  ...  Epoch 10/10, Loss: 0.005207964283975095  Validation Accuracy: 88.20%  `
+`Epoch 1/10, Loss: 0.1975638451139358  Validation Accuracy: 92.13%  Epoch 2/10, Loss: 0.10591830498411912  Validation Accuracy: 83.76%  ...  Epoch 10/10, Loss: 0.005207964283975095  Validation Accuracy: 88.20%  `
 
 ## Results
 
@@ -63,10 +82,13 @@ The model achieves a validation accuracy of approximately **88%** after 10 epoch
 
 ## Model
 
-The trained model is saved as terrain_model.pth and can be loaded for inference as follows:
+The trained model is saved as **terrain_model.pth** and can be loaded for inference as follows:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`  import torch  from model import TerrainClassifier  # Load the trained model  model = TerrainClassifier(num_classes=3)  model.load_state_dict(torch.load('terrain_model.pth'))  model.eval()  `
+```import torch
+ from model import TerrainClassifier  # Load the trained model  model = TerrainClassifier(num_classes=3)  model.load_state_dict(torch.load('terrain_model.pth'))  model.eval()   `
 
-## License
+License
+-------
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+```
