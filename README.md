@@ -27,7 +27,7 @@ The goal of this project is to develop a model that can classify terrain types b
 ### Prerequisites
 
 - Python 3.11 or later
-- PyTorch (CPU version, since GPU is not used in this project)
+- PyTorch
 - torchvision
 - matplotlib (for visualization)
 - PIL (for image processing)
