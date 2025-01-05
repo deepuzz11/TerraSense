@@ -37,7 +37,8 @@ The goal of this project is to develop a model that can classify terrain types b
 1. Clone the repository :
 
    `git clone https://github.com/yourusername/TerraSense.git`
-   ` cd TerraSense`
+
+   `cd TerraSense`
 
 2. Instal the necessary dependencies :
 
@@ -58,8 +59,8 @@ The goal of this project is to develop a model that can classify terrain types b
       ├── Forest Cover/
       └── Mountains/
    ```
-2. Training: To start training the model, run: ` python main.py`
-   This will begin the training process on your local machine (CPU), print training and validation loss/accuracy per epoch, and save the final trained model as terrain_model.pth.
+2. **Training**: To start training the model, run: ` python main.py`
+   This will begin the training process on your local machine (CPU), print training and validation loss/accuracy per epoch, and save the final trained model as **terrain_model.pth**.
 3. **Testing**: After training, you can use the trained model to make predictions on new images .
 
 ## Training Details
@@ -72,12 +73,14 @@ The goal of this project is to develop a model that can classify terrain types b
 
 ### Example Training Output:
 
-`Epoch 1/10, Loss: 0.1975638451139358  Validation Accuracy: 92.13%  `
-`Epoch 2/10, Loss: 0.10591830498411912  Validation Accuracy: 83.76%  `
-`.`
-`.`
-`.`
-`Epoch 10/10, Loss: 0.005207964283975095  Validation Accuracy: 88.20%  `
+```
+Epoch 1/10, Loss: 0.1975638451139358  Validation Accuracy: 92.13%
+Epoch 2/10, Loss: 0.10591830498411912  Validation Accuracy: 83.76%
+.
+.
+.
+Epoch 10/10, Loss: 0.005207964283975095  Validation Accuracy: 88.20%
+```
 
 ## Results
 
@@ -87,10 +90,13 @@ The model achieves a validation accuracy of approximately **88%** after 10 epoch
 
 The trained model is saved as **terrain_model.pth** and can be loaded for inference as follows:
 
-`import torch`
-`from model import TerrainClassifier  # Load the trained model `
-`model = TerrainClassifier(num_classes=3) ` `model.load_state_dict(torch.load('terrain_model.pth'))`
-`model.eval() `
+```
+import torch
+from model import TerrainClassifier  # Load the trained model
+model = TerrainClassifier(num_classes=3)
+model.load_state_dict(torch.load('terrain_model.pth'))
+model.eval()
+```
 
 ## License
 
