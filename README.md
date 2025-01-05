@@ -84,11 +84,12 @@ The model achieves a validation accuracy of approximately **88%** after 10 epoch
 
 The trained model is saved as **terrain_model.pth** and can be loaded for inference as follows:
 
-```import torch
- from model import TerrainClassifier  # Load the trained model  model = TerrainClassifier(num_classes=3)  model.load_state_dict(torch.load('terrain_model.pth'))  model.eval()   `
+````import torch
+ from model import TerrainClassifier  # Load the trained model  model = TerrainClassifier(num_classes=3)  model.load_state_dict(torch.load('terrain_model.pth'))  model.eval()  ```
 
 License
 -------
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-```
+
+````
