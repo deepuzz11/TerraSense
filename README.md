@@ -102,6 +102,8 @@ This graph shows how the training loss decreases as the model trains over the ep
 
 This graph tracks the validation accuracy, showing how well the model performs on the unseen validation data at each epoch. A steady increase in validation accuracy suggests that the model is generalizing well to new data.
 
+![image](https://github.com/user-attachments/assets/6c941443-8d71-4b31-9824-f67613df47d4)
+
 **The graphs are saved as training_results.png and will show the trends of training loss and validation accuracy throughout the 10 epochs of training.**
 
 ## Model
